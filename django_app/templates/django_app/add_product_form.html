@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+</head>
+<body>
+    <form method = "post">
+        <p><input name="product" placeholder="nazwa produktu"></p>
+        <p><input name="price" placeholder="cena produktu"</p>
+        <input type='submit' value='dodaj do listy'>
+        {% csrf_token %}
+    </form>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table { border: 1px solid black}
+        td {border: 1px solid black; padding: 5px}
+    </style>
+</head>
+<body>
+    <form method="post">
+    <table>
+
+     <tr>
+
+            <th>Tytuł</th>
+            <th>Treść posta</th>
+            <th>Autor komentarza</th>
+            <th>Komentarz</th>
+     </tr>
+        <td> {{ article.title }}</td>
+        <td> {{ article.description }}</td>
+        <td><input name="com_author" placeholder="com_autor" ></td>
+        <td><textarea name="com_message" placeholder="komentarz">{{ comment.com_message }}</textarea>
+        <input type="submit" value="{{ message }}"></td>
+
+    </table>
+        {% csrf_token %}
+    </form>
+
+
+    {% for comment in article.comment_set.all %}
+        <p><h4>{{ comment.author }}</h4>
+            {{ comment.message }}
+        </p>
+     {% endfor %}
+</body>
+</html>

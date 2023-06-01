@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Witaj w szablonie Django</title>
+</head>
+<body>
+    <h1>Witaj w szablonie Django!</h1>
+    {{ message }}
+    {{ names }}
+    {{ names | length  }}
+    {% for name in names %}
+        <p>{{ name }}</p>
+    {% endfor %}
+</body>
+</html>

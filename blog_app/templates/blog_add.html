@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+    <form method="post">
+        <input name="title" placeholder="tytuł" value="{{ article.title }}">
+        <input name="author" placeholder="autor" value="{{ article.publisher }}">
+        <textarea name="description" placeholder="opis">{{ article.description }}</textarea>
+        <input type="submit" value="{{ message }}">
+        {% csrf_token %}
+    </form>
+</body>
+</html>

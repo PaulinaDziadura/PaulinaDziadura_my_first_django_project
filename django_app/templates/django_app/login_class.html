@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login_class</title>
+</head>
+<body>
+   <form method="post">
+        <p><input name="user" placeholder="user"></p>
+        <p><input type="password" name="password" placeholder="hasło"></p>
+        <p><input type="submit" value="zaloguj"></p>
+       {% csrf_token %}
+           </form>
+{{ request.GET.message}}
+</body>
+</html>

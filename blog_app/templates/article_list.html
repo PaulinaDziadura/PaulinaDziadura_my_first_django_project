@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table { border: 1px solid black}
+        td {border: 1px solid black; padding: 5px}
+    </style>
+</head>
+<body>
+    <a href="/blog/add/">Dodaj artykuł</a>
+    <h1>Girls in the woods</h1>
+    <table>
+        <tr>
+            <th>Tytuł</th>
+            <th>Edycja</th>
+            <th>Usuń</th>
+        </tr>
+        {% for article in articles %}
+            <tr>
+                <td><input type="button" value="{{ article.title }}" onClick="location.href='/blog/show/{{ article.pk }}';"/></td>
+                <td><a href="/blog/edit/{{ article.pk }}">Edytuj</a></td>
+                <td><a href="/blog/delete/{{ article.pk }}">Usuń</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

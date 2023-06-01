@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pizza</title>
+</head>
+<body>
+   <p>Wybierz dodatki do twojej pizzy:</p>
+              <form method = "post">
+                  <p><input type='checkbox' name='choice' value='olivs'>Oliwki - 5,25 </p>
+                  <p><input type='checkbox' name='choice' value='dubble cheese'> Podwójny ser - 7,5</p>
+                  <p><input type='checkbox' name='choice' value='thick pizza dough'> Grube ciasto -4,5</p>
+                  <p><input type='checkbox' name='choice' value='pineapple'> Ananas -5,5 </p>
+
+                  <input type="submit" value="Wybieram dodatki">
+                  {% csrf_token %}
+              </form>
+</body>
+</html>

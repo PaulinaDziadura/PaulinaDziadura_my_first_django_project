@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tabliczka mnożenia do {{elements|length}}</title>
+    <body>
+		<table border="1px";>
+			<thead>
+				<tr>
+					<th colspan="10">
+						tabliczka mnożenia do {{elements|length}}
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="bold">
+					{% for i in elements %}
+                        <tr>
+                            {% for j in elements %}
+                                <td> {% widthratio i 1 j %}</td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+				</tr>
+        </table>
+        </tbody>
+	</body>
+</html>

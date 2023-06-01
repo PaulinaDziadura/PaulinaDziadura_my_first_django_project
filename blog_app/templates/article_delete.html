@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Czy chcesz usunąć artykuł {{ article.title }} ?</h1>
+    <form method="post">
+        <input type="submit" name="delete" value="Usuń">
+        <input type="submit" name="cancel" value="Anuluj">
+        {% csrf_token %}
+    </form>
+</body>
+</html>
